@@ -1,10 +1,5 @@
 // scrape routine.json and display it in the table
 $.getJSON("routine.json", function (data) {
-    console.log(data);
-});
-// scrape routine.json and display it in the table
-$.getJSON("routine.json", function (data) {
-    console.log(data);
     var table = $("#table-body");
     for (var day in data) {
         var row = $("<tr>");
@@ -13,8 +8,20 @@ $.getJSON("routine.json", function (data) {
             // s append break after every word in the string
             var text = data[day][time].split(" ").join("</br>");
             row.append($("<td>").html(text));
-            // row.append($("<td>").text(data[day][time]));
+        }
+
+        // if 2 consecutive same values, then merge them
+        var prev = row.children().eq(1).text();
+        for (var i = 2; i < row.children().length; i++) {
+            var curr = row.children().eq(i).text();
+            if (prev == curr) {
+                row.children().eq(i).remove();
+                row.children().eq(i - 1).attr("colspan", 2);
+            } else {
+                prev = curr;
+            }
         }
         table.append(row);
     }
+    
 });

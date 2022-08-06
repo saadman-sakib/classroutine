@@ -32,12 +32,14 @@ body{
 td{
     padding-left: auto!important;
     padding-right: auto!important;
+    text-align: center!important;
     min-width: 80px !important;
 }
 th{
     padding-left: auto!important;
     padding-right: auto!important;
     min-width: 80px !important;
+    text-align: center!important;
 }
 
 .table-holder{
