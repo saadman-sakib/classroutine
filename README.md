@@ -2,7 +2,7 @@
 
 ## How to get the best out of this project
 - fork this repo
-- update the **routine.json** according to your routine
+- update the __**routine.json**__ according to your routine
 - update the table heading according to your routine
     ```html
     <tr>
@@ -15,6 +15,6 @@
         <th scope="col">3:30-4:50</th>
     </tr>
     ```
-- add extra craps inside **index.html** body
+- add extra craps inside __**index.html**__ body
 - host it with github pages
 - enjoy
