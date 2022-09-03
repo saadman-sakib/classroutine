@@ -46,3 +46,10 @@ th{
     border-radius: 8px!important;
     border: solid 1px rgb(171, 171, 171) !important;
 }
+
+.list-group-item{
+    background-color: rgb(19, 22, 24)!important;
+    color: white!important;
+    border-color: rgb(146, 146, 146) !important;
+    /* border-radius: 8px!important; */
+}
