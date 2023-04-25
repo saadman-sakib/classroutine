@@ -30,6 +30,7 @@ $.getJSON("routine.json", function (data) {
 // screape notifications.json and display it in the ul
 $.getJSON("notifications.json", function (data) {
     notifications = data["notifications"];
+    consol.log(data);
     var ul = $("#notifications");
     for (var i = 0; i < notifications.length; i++) {
         ul.append( `<li class="list-group-item" > ${notifications[i]} </li>`);
